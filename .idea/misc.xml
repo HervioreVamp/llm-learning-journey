@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Black">
+    <option name="sdkName" value="tensorflow_py3_10" />
+  </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="tensorflow_py3_10" project-jdk-type="Python SDK" />
+</project>
