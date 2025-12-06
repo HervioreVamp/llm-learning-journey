@@ -34,7 +34,29 @@ print(f"Using device: {device}")
 
 # -------------------------- 2. 数据 --------------------------
 from data import Corpus
+import os
+import requests
+from pathlib import Path
 
+
+def download_wikitext2(data_dir="./data/wikitext-2"):
+    """自动下载数据集，如果本地没有的话"""
+    os.makedirs(data_dir, exist_ok=True)
+    base_url = "https://raw.githubusercontent.com/pytorch/examples/main/word_language_model/data/wikitext-2/"
+    files = ["train.txt", "valid.txt", "test.txt"]
+
+    for fname in files:
+        local_path = Path(data_dir) / fname
+        if not local_path.exists():
+            print(f"正在下载 {fname}...")
+            url = base_url + fname
+            response = requests.get(url)
+            local_path.write_text(response.text, encoding="utf8")
+    return str(data_dir)
+
+
+# 使用方式
+data_path = download_wikitext2()
 corpus = Corpus(args.data)  # 语料库 读取txt那几个文件 训练/验证/测试,具体的类实现在data.py
 ntokens = len(corpus.dictionary)
 
