@@ -1,5 +1,9 @@
 修改自https://github.com/pytorch/examples/tree/main/word_language_model
 
+## 环境要求
+- Python 3.10+
+- PyTorch 2.1.0+
+
 ## 数据准备
 
 本项目使用WikiText-2数据集，但**不包含在仓库中**。
