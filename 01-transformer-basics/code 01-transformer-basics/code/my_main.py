@@ -35,7 +35,7 @@ print(f"Using device: {device}")
 # -------------------------- 2. 数据 --------------------------
 from data import Corpus
 
-corpus = Corpus(args.data)  # 语料库 读取txt那几个文件 训练/验证/测试,具体的类实现去看data.py
+corpus = Corpus(args.data)  # 语料库 读取txt那几个文件 训练/验证/测试,具体的类实现在data.py
 ntokens = len(corpus.dictionary)
 
 
