@@ -1,4 +1,4 @@
-修改自https://github.com/pytorch/examples/tree/main/word\_language\_model
+修改自https://github.com/pytorch/examples/tree/main/word_language_model
 
 ## 数据准备
 
